@@ -85,7 +85,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1667.25, 89.0, 222.0, 36.0 ],
-					"presentation_linecount" : 2,
 					"text" : ";\r\nmax launchbrowser https://www.rhoy.ca/"
 				}
 
@@ -1305,7 +1304,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-192", 0 ],
-									"order" : 0,
+									"order" : 1,
 									"source" : [ "obj-194", 0 ]
 								}
 
@@ -1314,7 +1313,7 @@
 								"patchline" : 								{
 									"destination" : [ "obj-199", 0 ],
 									"midpoints" : [ 174.5, 332.0, 150.0, 332.0, 150.0, 206.0, 174.5, 206.0 ],
-									"order" : 1,
+									"order" : 0,
 									"source" : [ "obj-194", 0 ]
 								}
 
@@ -1843,20 +1842,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 147.0, 417.0, 50.0, 22.0 ],
-					"text" : "99"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-95",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1522.0, 401.0, 69.0, 22.0 ],
-					"presentation_linecount" : 2,
-					"text" : "ui_listen $1"
+					"text" : "27"
 				}
 
 			}
@@ -1880,7 +1866,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1789.0, 496.0, 107.0, 22.0 ],
-					"presentation_linecount" : 2,
 					"text" : "viewport 0. 0. 1. 1."
 				}
 
@@ -2143,7 +2128,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1514.0, 825.0, 97.0, 22.0 ],
-					"presentation_linecount" : 2,
 					"text" : "rotatexyz 0. 0. 0."
 				}
 
@@ -2155,8 +2139,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1419.0, 825.0, 90.0, 22.0 ],
-					"text" : "position 0. 0. 0."
+					"patching_rect" : [ 1419.0, 825.0, 94.0, 22.0 ],
+					"text" : "position 0. -7. 0."
 				}
 
 			}
@@ -2191,8 +2175,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 130.0, 85.0, 141.0, 22.0 ],
-					"text" : "worldbox_scale $1 $1 $1"
+					"patching_rect" : [ 130.0, 85.0, 227.0, 22.0 ],
+					"text" : "worldbox_scale $1 $1 $1, gravity 0 -9.8 0"
 				}
 
 			}
@@ -2204,7 +2188,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 883.0, 204.0, 91.0, 22.0 ],
-					"presentation_linecount" : 2,
 					"text" : "impulse -50 0 0"
 				}
 
@@ -2292,8 +2275,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 569.0, 178.0, 108.0, 23.0 ],
-					"text" : "jit.gl.skybox"
+					"patching_rect" : [ 569.0, 178.0, 141.0, 23.0 ],
+					"text" : "jit.gl.skybox @infinite 0"
 				}
 
 			}
@@ -2308,7 +2291,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_gl_texture", "" ],
 					"patching_rect" : [ 729.0, 98.0, 205.0, 38.0 ],
-					"presentation_linecount" : 2,
 					"text" : "jit.gl.cubemap @file panorama_cube_map.png"
 				}
 
@@ -2324,18 +2306,6 @@
 					"outlettype" : [ "jit_matrix", "" ],
 					"patching_rect" : [ 729.0, 294.0, 188.0, 23.0 ],
 					"text" : "jit.gl.gridshape @shape sphere"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-5",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1522.0, 439.0, 145.0, 22.0 ],
-					"text" : "jit.anim.drive @ui_listen 1"
 				}
 
 			}
@@ -3185,13 +3155,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-9", 0 ],
-					"source" : [ "obj-5", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-33", 0 ],
 					"source" : [ "obj-59", 0 ]
 				}
@@ -3341,14 +3304,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-95", 0 ],
-					"order" : 2,
-					"source" : [ "obj-90", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-4", 0 ],
 					"source" : [ "obj-92", 0 ]
 				}
@@ -3394,18 +3349,11 @@
 				}
 
 			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
-					"source" : [ "obj-95", 0 ]
-				}
-
-			}
  ],
 		"dependency_cache" : [ 			{
 				"name" : "first_person_camera.maxpat",
 				"bootpath" : "~/Documents/GitHub/max_fps_cam",
-				"patcherrelativepath" : "../../max_fps_cam",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
